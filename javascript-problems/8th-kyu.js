@@ -53,6 +53,12 @@ We're testing basic loops and math operations. This is for beginners who are jus
 Advanced users may find this extremely easy and can easily write this in one line.
 */
 function sumArrays(numbers) {
+  // let sum = 0;
+  // for (let el of numbers) {
+  //     sum += el;
+  // }
+  // return sum;
+
   return numbers.reduce((a, b) => a + b, 0);
 }
 console.log("sumArrays: " + sumArrays([1, 5.2, 4, 0, -1]));
