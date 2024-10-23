@@ -9,17 +9,24 @@ Examples:(Input1, Input2 --> Output (explanation)))
 5, 9 --> "1110" (5 + 9 = 14 in decimal or 1110 in binary)
 */
 function addBinary(a, b) {
-    let sum = a + b;
-    return sum.toString(2);
+  let sum = a + b;
+  return sum.toString(2);
 }
 console.log("addBinary: " + addBinary(1, 1));
 console.log("addBinary: " + addBinary(5, 9));
 
 // const addBinary = (a, b) => (a + b).toString(2);
 
-/* ---------------------------------------- nnn ----------------------------------------
+/* ---------------------------------------- Reverse words ----------------------------------------
+Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
 
+Examples
+"This is an example!" ==> "sihT si na !elpmaxe"
+"double  spaces"      ==> "elbuod  secaps"
 */
+function reverseWords(str) {
+  return str.split("").reverse().join("").split(" ").reverse().join(" ");
+}
 
 /* ---------------------------------------- nnn ----------------------------------------
 

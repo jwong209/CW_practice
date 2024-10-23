@@ -27,9 +27,11 @@ public class Java_8th_kyu {
 
 //        System.out.println("removeExclamationMarks: " + removeExclamationMarks("Hello!"));
 
-        System.out.println("");
+//        System.out.println("reverseString: " + reverseString("world"));
+//        System.out.println("reverseString: " + reverseString("word"));
 
-        System.out.println("");
+        System.out.println("enoughSpace: " + enoughSpace(10, 5, 5));
+        System.out.println("enoughSpace: " + enoughSpace(100, 60, 50));
     }
 
     /* --------------- Vowel remover ---------------
@@ -111,10 +113,39 @@ public class Java_8th_kyu {
         return s.replace("!", "");
     }
 
-    /* --------------- nnn ---------------
+    /* --------------- Reversed Strings ---------------
+    Complete the solution so that it reverses the string passed into it.
 
+    'world'  =>  'dlrow'
+    'word'   =>  'drow'
      */
+    public static String reverseString(String str) {
+        return new StringBuilder(str).reverse().toString();
+    }
 
+    /* --------------- Will there be enough space? ---------------
+    The Story:
+    Bob is working as a bus driver. However, he has become extremely popular amongst the city's residents. With so many passengers wanting to get aboard his bus, he sometimes has to face the problem of not enough space left on the bus! He wants you to write a simple program telling him if he will be able to fit all the passengers.
 
+    Task Overview:
+    You have to write a function that accepts three parameters:
 
+    cap is the amount of people the bus can hold excluding the driver.
+    on is the number of people on the bus excluding the driver.
+    wait is the number of people waiting to get on to the bus excluding the driver.
+    If there is enough space, return 0, and if there isn't, return the number of passengers he can't take.
+
+    Usage Examples:
+    cap = 10, on = 5, wait = 5 --> 0 # He can fit all 5 passengers
+    cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
+     */
+    public static int enoughSpace(int cap, int on, int wait){
+//        if ((on + wait) <= cap) {
+//            return 0;
+//        } else {
+//            return (on + wait) - cap;
+//        }
+
+        return Math.max(0, wait + on - cap);
+    }
 }
