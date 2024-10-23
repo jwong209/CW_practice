@@ -98,9 +98,9 @@ If Alex gets 10 or more hoops, return the string "Great, now move on to tricks".
 If he doesn't get 10 hoops, return the string "Keep at it until you get it".
 */
 function hoopCount(n) {
-  return n >= 10 ?
-    "Great, now move on to tricks" :
-    "Keep at it until you get it";
+  return n >= 10
+    ? "Great, now move on to tricks"
+    : "Keep at it until you get it";
 }
 // console.log(hoopCount(10));
 // console.log(hoopCount(9));
@@ -109,7 +109,7 @@ function hoopCount(n) {
 Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
 */
 function removeExclamationMarks(s) {
-  return s.replace(/!/g, '');
+  return s.replace(/!/g, "");
 }
 // console.log(removeExclamationMarks("Hello!"));
 
@@ -152,13 +152,39 @@ function enoughSpace(cap, on, wait) {
 // console.log(enoughSpace(10, 5, 5));
 // console.log(enoughSpace(100, 60, 50));
 
-/* ---------------------------------------- nnn ----------------------------------------
+/* ---------------------------------------- Highest and Lowest ----------------------------------------
+In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
 
+Examples
+highAndLow("1 2 3 4 5"); // return "5 1"
+highAndLow("1 2 -3 4 5"); // return "5 -3"
+highAndLow("1 9 3 4 -5"); // return "9 -5"
+Notes
+All numbers are valid Int32, no need to validate them.
+There will always be at least one number in the input string.
+Output string must be two numbers separated by a single space, and highest number is first.
 */
+function highAndLow(numbers) {
+  const arr = numbers.split(" ");
+  let high = -Infinity;
+  let low = Infinity;
 
-/* ---------------------------------------- nnn ----------------------------------------
+  for (let num of arr) {
+    if (parseInt(num) > high) {
+      high = num;
+    }
+    if (parseInt(num) < low) {
+      low = num;
+    }
+  }
+  return high + " " + low;
 
-*/
+  // numbers = numbers.split(" ");
+  // return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
+}
+console.log(highAndLow("1 2 3 4 5"));
+console.log(highAndLow("1 2 -3 4 5"));
+console.log(highAndLow("1 2 3 4 -5"));
 
 /* ---------------------------------------- nnn ----------------------------------------
 

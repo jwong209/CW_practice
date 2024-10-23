@@ -30,8 +30,9 @@ public class Java_8th_kyu {
 //        System.out.println("reverseString: " + reverseString("world"));
 //        System.out.println("reverseString: " + reverseString("word"));
 
-        System.out.println("enoughSpace: " + enoughSpace(10, 5, 5));
-        System.out.println("enoughSpace: " + enoughSpace(100, 60, 50));
+//        System.out.println("enoughSpace: " + enoughSpace(10, 5, 5));
+//        System.out.println("enoughSpace: " + enoughSpace(100, 60, 50));
+
     }
 
     /* --------------- Vowel remover ---------------
