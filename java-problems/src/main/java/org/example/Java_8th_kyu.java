@@ -35,7 +35,12 @@ public class Java_8th_kyu {
 //        System.out.println("enoughSpace: " + enoughSpace(10, 5, 5));
 //        System.out.println("enoughSpace: " + enoughSpace(100, 60, 50));
 
-        System.out.println("divisibleBy: " + Arrays.toString(divisibleBy(new int[]{1, 2, 3, 4, 5, 6},2)));
+//        System.out.println("divisibleBy: " + Arrays.toString(divisibleBy(new int[]{1, 2, 3, 4, 5, 6},2)));
+
+//        System.out.println("basicMath: " + basicMath("+", 4, 7));
+//        System.out.println("basicMath: " + basicMath("-", 15, 18));
+//        System.out.println("basicMath: " + basicMath("*", 5, 5));
+//        System.out.println("basicMath: " + basicMath("/", 49, 7));
 
 
     }
@@ -178,13 +183,40 @@ public class Java_8th_kyu {
 //        return Arrays.stream(numbers).filter(n -> n % divider == 0).toArray();
     }
 
-    /* --------------- nnn ---------------
+    /* --------------- Basic Mathematical Operations ---------------
+    Your task is to create a function that does four basic mathematical operations.
 
+    The function should take three arguments - operation(string/char), value1(number), value2(number).
+    The function should return result of numbers after applying the chosen operation.
+
+    Examples(Operator, value1, value2) --> output
+    ('+', 4, 7) --> 11
+    ('-', 15, 18) --> -3
+    ('*', 5, 5) --> 25
+    ('/', 49, 7) --> 7
      */
+    public static Integer basicMath(String op, int v1, int v2) {
+        if (op.equals("+")) {
+            return v1 + v2;
+        }
+        if (op.equals("-")) {
+            return v1 - v2;
+        }
+        if (op.equals("*")) {
+            return v1 * v2;
+        }
+        if (op.equals("/")) {
+            return v1 / v2;
+        }
+        return 0;
+    }
 
-    /* --------------- nnn ---------------
-
+    /* --------------- Volume of a Cuboid ---------------
+    Bob needs a fast way to calculate the volume of a cuboid with three values: the length, width and height of the cuboid. Write a function to help Bob with this calculation.
      */
+    public static double getVolumeOfCuboid(final double length, final double width, final double height) {
+        return length * width * height;
+    }
 
     /* --------------- nnn ---------------
 
