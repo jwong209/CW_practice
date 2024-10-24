@@ -182,9 +182,26 @@ function highAndLow(numbers) {
   // numbers = numbers.split(" ");
   // return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
 }
-console.log(highAndLow("1 2 3 4 5"));
-console.log(highAndLow("1 2 -3 4 5"));
-console.log(highAndLow("1 2 3 4 -5"));
+// console.log(highAndLow("1 2 3 4 5"));
+// console.log(highAndLow("1 2 -3 4 5"));
+// console.log(highAndLow("1 2 3 4 -5"));
+
+/* ---------------------------------------- Find numbers which are divisible by given number ----------------------------------------
+  Complete the function which takes two arguments and returns all numbers which are divisible by the given divisor. First argument is an array of numbers and the second is the divisor.
+
+  Example(Input1, Input2 --> Output)
+  [1, 2, 3, 4, 5, 6], 2 --> [2, 4, 6]
+*/
+function divisibleBy(numbers, divisor) {
+  let arr = [];
+  for (let el of numbers) {
+    if (el % divisor === 0) arr.push(el);
+  }
+  return arr;
+
+  // return numbers.filter(n => n % divisor === 0)
+}
+console.log(divisibleBy([1, 2, 3, 4, 5, 6], 2));
 
 /* ---------------------------------------- nnn ----------------------------------------
 

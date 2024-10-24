@@ -1,10 +1,12 @@
 package org.example;
 
 import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.*;
 
 public class Java_8th_kyu {
     public static void main(String[] args) {
-
 //        System.out.println("Vowel remover: " + shortcut("hello"));
 //        System.out.println("Vowel remover: " + shortcut("codewars"));
 //        System.out.println("Vowel remover: " + shortcut("goodbye"));
@@ -33,6 +35,9 @@ public class Java_8th_kyu {
 //        System.out.println("enoughSpace: " + enoughSpace(10, 5, 5));
 //        System.out.println("enoughSpace: " + enoughSpace(100, 60, 50));
 
+        System.out.println("divisibleBy: " + Arrays.toString(divisibleBy(new int[]{1, 2, 3, 4, 5, 6},2)));
+
+
     }
 
     /* --------------- Vowel remover ---------------
@@ -57,7 +62,7 @@ public class Java_8th_kyu {
 
     All values will be positive integers or floats, or zero.
      */
-    public static boolean isPlural(float f){
+    public static boolean isPlural(float f) {
         return f != 1.0;
     }
 
@@ -91,8 +96,8 @@ public class Java_8th_kyu {
     /* --------------- Function 2 - squaring an argument ---------------
     Now you have to write a function that takes an argument and returns the square of it.
      */
-    public static int square(int n){
-        return n*n;
+    public static int square(int n) {
+        return n * n;
     }
 
     /* --------------- Keep up the hoop ---------------
@@ -103,7 +108,7 @@ public class Java_8th_kyu {
     If Alex gets 10 or more hoops, return the string "Great, now move on to tricks".
     If he doesn't get 10 hoops, return the string "Keep at it until you get it".
      */
-    public static String hoopCount(int n){
+    public static String hoopCount(int n) {
         return n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it";
     }
 
@@ -140,7 +145,7 @@ public class Java_8th_kyu {
     cap = 10, on = 5, wait = 5 --> 0 # He can fit all 5 passengers
     cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
      */
-    public static int enoughSpace(int cap, int on, int wait){
+    public static int enoughSpace(int cap, int on, int wait) {
 //        if ((on + wait) <= cap) {
 //            return 0;
 //        } else {
@@ -149,4 +154,47 @@ public class Java_8th_kyu {
 
         return Math.max(0, wait + on - cap);
     }
+
+    /* --------------- Find numbers which are divisible by given number ---------------
+    Complete the function which takes two arguments and returns all numbers which are divisible by the given divisor. First argument is an array of numbers and the second is the divisor.
+
+    Example(Input1, Input2 --> Output)
+    [1, 2, 3, 4, 5, 6], 2 --> [2, 4, 6]
+     */
+    public static int[] divisibleBy(int[] numbers, int divider) {
+        List<Integer> answer = new ArrayList<>();
+
+        for (int num : numbers) {
+            if (num % divider == 0) {
+                answer.add((int) num);
+            }
+        }
+        int[] result = new int[answer.size()];
+        for (int i = 0; i < answer.size(); i++) {
+            result[i] = answer.get(i);
+        }
+        return result;
+
+//        return Arrays.stream(numbers).filter(n -> n % divider == 0).toArray();
+    }
+
+    /* --------------- nnn ---------------
+
+     */
+
+    /* --------------- nnn ---------------
+
+     */
+
+    /* --------------- nnn ---------------
+
+     */
+
+    /* --------------- nnn ---------------
+
+     */
+
+    /* --------------- nnn ---------------
+
+     */
 }
