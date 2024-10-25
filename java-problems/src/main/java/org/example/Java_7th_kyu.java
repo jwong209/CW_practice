@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.HashSet;
+
 public class Java_7th_kyu {
     public static void main(String[] args) {
 
@@ -18,7 +20,9 @@ public class Java_7th_kyu {
 //        System.out.println("strEndsWith: " + strEndsWith("abc", "bc"));
 //        System.out.println("strEndsWith: " + strEndsWith("abc", "d"));
 
-        System.out.println("");
+        System.out.println("isogram: " + isIsogram("Dermatoglyphics"));
+        System.out.println("isogram: " + isIsogram("aba"));
+        System.out.println("isogram: " + isIsogram("moOse"));
 
         System.out.println("");
 
@@ -132,9 +136,25 @@ public class Java_7th_kyu {
         return str.endsWith(ending);
     }
 
-    /* -------------------- nnn --------------------
+    /* -------------------- Isograms --------------------
+    An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
 
+    Example: (Input --> Output)
+
+    "Dermatoglyphics" --> true
+    "aba" --> false
+    "moOse" --> false (ignore letter case)
      */
+    public static boolean  isIsogram(String str) {
+        String lowerCaseStr = str.toLowerCase();
+        HashSet<Character> charSet = new HashSet<>();
+        for (char c : lowerCaseStr.toCharArray()) {
+            if (!charSet.add(c)) {
+                return false;
+            }
+        }
+        return true;
+    }
 
     /* -------------------- nnn --------------------
 
