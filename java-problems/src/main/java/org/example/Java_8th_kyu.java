@@ -42,6 +42,13 @@ public class Java_8th_kyu {
 //        System.out.println("basicMath: " + basicMath("*", 5, 5));
 //        System.out.println("basicMath: " + basicMath("/", 49, 7));
 
+//        System.out.println("sentenceSmash: " + sentenceSmash(new String[]{"hello", "world", "this", "is", "great"}));
+
+//        System.out.println("oddCount: " + oddCount(7));
+//        System.out.println("oddCount: " + oddCount(15));
+
+//        System.out.println("findAverage: " + find_average(new int[]{1, 3, 5}));
+//        System.out.println("findAverage: " + find_average(new int[]{1, 3, 5, 7, 9, 11, 13}));
 
     }
 
@@ -232,11 +239,74 @@ public class Java_8th_kyu {
         return String.valueOf(num);
     }
     
-    /* --------------- nnn ---------------
+    /* --------------- Sentence Smash ---------------
+    Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning or the end of the sentence!
+
+    Example
+    ['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
+    words = ['hello', 'world', 'this', 'is', 'great']
+    smash(words) # returns "hello world this is great"
+    Assumptions
+    You can assume that you are only given words.
+    You cannot assume the size of the array.
+    You can assume that you do get an array.
+     */
+    public static String sentenceSmash(String... words) {
+        if (words.length <= 0) {
+            return "";
+        }
+        String answer = "";
+        for (int i = 0; i < words.length; i++) {
+            answer += words[i];
+
+            if (i < words.length - 1) {
+                answer += " ";
+            }
+        }
+        return answer;
+
+//        return String.join(" ", words);
+    }
+
+    /* --------------- Count Odd Numbers below n ---------------
+    Given a number n, return the number of positive odd numbers below n, EASY!
+
+    Examples (Input -> Output)
+    7  -> 3 (because odd numbers below 7 are [1, 3, 5])
+    15 -> 7 (because odd numbers below 15 are [1, 3, 5, 7, 9, 11, 13])
+     */
+    public static int oddCount(int n){
+        return n/2;
+    }
+
+    /* -------------------- Calculate average --------------------
+    Write a function which calculates the average of the numbers in a given array.
+
+    Note: Empty arrays should return 0.
+     */
+    public static double find_average(int[] array) {
+        int sum = 0;
+        for (int num : array) {
+            sum += num;
+        }
+        return (double) sum / array.length;
+
+//        return Arrays.stream(array).average().orElse(0);
+    }
+
+    /* -------------------- nnn --------------------
 
      */
 
-    /* --------------- nnn ---------------
+    /* -------------------- nnn --------------------
+
+     */
+
+    /* -------------------- nnn --------------------
+
+     */
+
+    /* -------------------- nnn --------------------
 
      */
 }

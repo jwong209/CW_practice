@@ -269,17 +269,60 @@ function numberToString(num) {
   return num.toString();
 }
 
-/* ---------------------------------------- nnn ----------------------------------------
+/* ---------------------------------------- Sentence Smash ----------------------------------------
+    Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning or the end of the sentence!
 
+    Example
+    ['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
+    words = ['hello', 'world', 'this', 'is', 'great']
+    smash(words) # returns "hello world this is great"
+
+    Assumptions
+    You can assume that you are only given words.
+    You cannot assume the size of the array.
+    You can assume that you do get an array.
 */
+const smash = words => words.join(' ');
+console.log(smash(['hello', 'world', 'this', 'is', 'great']));
 
-/* ---------------------------------------- nnn ----------------------------------------
+/* ---------------------------------------- Count Odd Numbers below n ----------------------------------------
+  Given a number n, return the number of positive odd numbers below n, EASY!
 
+  Examples (Input -> Output)
+  7  -> 3 (because odd numbers below 7 are [1, 3, 5])
+  15 -> 7 (because odd numbers below 15 are [1, 3, 5, 7, 9, 11, 13])
 */
+const oddCount = n => Math.floor(n / 2);
+// function oddCount(n){
+//   let arr = [];
+//   let i = 1;
+//   while (i < n) {
+//     arr.push(i);
+//     i+= 2;
+//   }
+//   return arr.length;
+// }
+console.log(oddCount(7));
+console.log(oddCount(15));
 
-/* ---------------------------------------- nnn ----------------------------------------
+/* ---------------------------------------- Calculate average ----------------------------------------
+  Write a function which calculates the average of the numbers in a given array.
 
+  Note: Empty arrays should return 0.
 */
+const findAverage = array => {
+  if (array.length === 0) {
+    return 0;
+  }
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+  return sum / array.length;
+}
+console.log("findAverage: " + findAverage([1, 1, 1]));
+console.log("findAverage: " + findAverage([1, 2, 3]));
+console.log("findAverage: " + findAverage([1, 2, 3, 4]));
 
 /* ---------------------------------------- nnn ----------------------------------------
 
