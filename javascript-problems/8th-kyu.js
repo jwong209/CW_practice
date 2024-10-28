@@ -282,8 +282,8 @@ function numberToString(num) {
     You cannot assume the size of the array.
     You can assume that you do get an array.
 */
-const smash = words => words.join(' ');
-console.log(smash(['hello', 'world', 'this', 'is', 'great']));
+// const smash = words => words.join(' ');
+// console.log(smash(['hello', 'world', 'this', 'is', 'great']));
 
 /* ---------------------------------------- Count Odd Numbers below n ----------------------------------------
   Given a number n, return the number of positive odd numbers below n, EASY!
@@ -302,8 +302,8 @@ const oddCount = n => Math.floor(n / 2);
 //   }
 //   return arr.length;
 // }
-console.log(oddCount(7));
-console.log(oddCount(15));
+// console.log(oddCount(7));
+// console.log(oddCount(15));
 
 /* ---------------------------------------- Calculate average ----------------------------------------
   Write a function which calculates the average of the numbers in a given array.
@@ -320,13 +320,28 @@ const findAverage = array => {
   }
   return sum / array.length;
 }
-console.log("findAverage: " + findAverage([1, 1, 1]));
-console.log("findAverage: " + findAverage([1, 2, 3]));
-console.log("findAverage: " + findAverage([1, 2, 3, 4]));
+// console.log("findAverage: " + findAverage([1, 1, 1]));
+// console.log("findAverage: " + findAverage([1, 2, 3]));
+// console.log("findAverage: " + findAverage([1, 2, 3, 4]));
 
-/* ---------------------------------------- nnn ----------------------------------------
+/* ---------------------------------------- Find the position! ----------------------------------------
+    When provided with a letter, return its position in the alphabet.
 
+    Input :: "a"
+
+    Output :: "Position of alphabet: 1"
+
+    Note: Only lowercased English letters are tested
 */
+function position(letter){
+  let alphabet = ['zero trolls', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  return `Position of alphabet: ${alphabet.indexOf(letter)}`;
+
+  // const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  // return 'Position of alphabet: ' + (alphabet.indexOf(letter) + 1);
+}
+// console.log(position('c'));
+// console.log(position('z'));
 
 /* ---------------------------------------- nnn ----------------------------------------
 

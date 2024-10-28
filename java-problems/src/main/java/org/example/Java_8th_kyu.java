@@ -50,6 +50,10 @@ public class Java_8th_kyu {
 //        System.out.println("findAverage: " + find_average(new int[]{1, 3, 5}));
 //        System.out.println("findAverage: " + find_average(new int[]{1, 3, 5, 7, 9, 11, 13}));
 
+//        System.out.println(position('a'));
+//        System.out.println(position('h'));
+//        System.out.println(position('z'));
+
     }
 
     /* --------------- Vowel remover ---------------
@@ -294,9 +298,19 @@ public class Java_8th_kyu {
 //        return Arrays.stream(array).average().orElse(0);
     }
 
-    /* -------------------- nnn --------------------
+    /* -------------------- Find the position! --------------------
+    When provided with a letter, return its position in the alphabet.
 
+    Input :: "a"
+
+    Output :: "Position of alphabet: 1"
+
+    Note: Only lowercased English letters are tested
      */
+    public static String position(char alphabet)
+    {
+        return "Position of alphabet: " + ((int) alphabet - 96);
+    }
 
     /* -------------------- nnn --------------------
 
