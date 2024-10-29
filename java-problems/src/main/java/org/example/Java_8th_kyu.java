@@ -54,6 +54,8 @@ public class Java_8th_kyu {
 //        System.out.println(position('h'));
 //        System.out.println(position('z'));
 
+//        System.out.println("twiceAsOld: " + twiceAsOld(50, 20));
+
     }
 
     /* --------------- Vowel remover ---------------
@@ -312,9 +314,16 @@ public class Java_8th_kyu {
         return "Position of alphabet: " + ((int) alphabet - 96);
     }
 
-    /* -------------------- nnn --------------------
+    /* -------------------- Twice as old --------------------
+    Your function takes two arguments:
 
+    current father's age (years)
+    current age of his son (years)
+    Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old). The answer is always greater or equal to 0, no matter if it was in the past or it is in the future.
      */
+    public static int twiceAsOld(int dadYears, int sonYears){
+        return Math.abs(dadYears - 2 * sonYears);
+    }
 
     /* -------------------- nnn --------------------
 

@@ -142,13 +142,49 @@ console.log(isIsogram("Dermatoglyphics"));
 console.log(isIsogram("aba"));
 console.log(isIsogram("moOse"));
 
-/* ---------------------------------------- nnn ----------------------------------------
+/* ---------------------------------------- Count the divisors of a number ----------------------------------------
+    Count the number of divisors of a positive integer n.
 
+    Random tests go up to n = 500000, but fixed tests go higher.
+
+    Examples (input --> output)
+    4 --> 3 // we have 3 divisors - 1, 2 and 4
+    5 --> 2 // we have 2 divisors - 1 and 5
+    12 --> 6 // we have 6 divisors - 1, 2, 3, 4, 6 and 12
+    30 --> 8 // we have 8 divisors - 1, 2, 3, 5, 6, 10, 15 and 30
+    Note you should only return a number, the count of divisors. The numbers between parentheses are shown only for you to see which numbers are counted in each case.
 */
+function getDivisorsCnt(n) {
+  let count = 0
+  if (n % Math.sqrt(n) == 0) {
+    count++;
+  }
+  for (let i = 0; i < Math.sqrt(n); i++) {
+    if (n % i == 0) {
+      count += 2;
+    }
+  }
+  return count;
+}
 
 /* ---------------------------------------- nnn ----------------------------------------
+    You are given an odd-length array of integers, in which all of them are the same, except for one single number.
 
+    Complete the method which accepts such an array, and returns that single different number.
+
+    The input array will always be valid! (odd-length >= 3)
+
+    Examples
+    [1, 1, 2] ==> 2
+    [17, 17, 3, 17, 17, 17, 17] ==> 3
 */
+function stray(numbers) {
+  let arr = numbers.sort();
+  if (arr[0] !== arr[1]) {
+    return arr[0];
+  }
+  return arr[arr.length - 1];
+}
 
 /* ---------------------------------------- nnn ----------------------------------------
 

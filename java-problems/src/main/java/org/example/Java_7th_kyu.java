@@ -1,6 +1,6 @@
 package org.example;
 
-import java.util.HashSet;
+import java.util.*;
 
 public class Java_7th_kyu {
     public static void main(String[] args) {
@@ -156,13 +156,44 @@ public class Java_7th_kyu {
         return true;
     }
 
-    /* -------------------- nnn --------------------
+    /* -------------------- Count the divisors of a number --------------------
+    Count the number of divisors of a positive integer n.
 
+    Random tests go up to n = 500000, but fixed tests go higher.
+
+    Examples (input --> output)
+    4 --> 3 // we have 3 divisors - 1, 2 and 4
+    5 --> 2 // we have 2 divisors - 1 and 5
+    12 --> 6 // we have 6 divisors - 1, 2, 3, 4, 6 and 12
+    30 --> 8 // we have 8 divisors - 1, 2, 3, 5, 6, 10, 15 and 30
+    Note you should only return a number, the count of divisors. The numbers between parentheses are shown only for you to see which numbers are counted in each case.
      */
+    public static long numberOfDivisors(int n) {
+        if (n == 1) return 1;
+        long count = 2;
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                count += (i * i == n) ? 1 : 2;
+            }
+        }
+        return count;
+    }
 
-    /* -------------------- nnn --------------------
+    /* -------------------- Find the stray number --------------------
+    You are given an odd-length array of integers, in which all of them are the same, except for one single number.
 
+    Complete the method which accepts such an array, and returns that single different number.
+
+    The input array will always be valid! (odd-length >= 3)
+
+    Examples
+    [1, 1, 2] ==> 2
+    [17, 17, 3, 17, 17, 17, 17] ==> 3
      */
+    public static int stray(int[] numbers) {
+        Arrays.sort(numbers);
+        return numbers[0] != numbers[1] ? numbers[0] : numbers[numbers.length - 1];
+    }
 
     /* -------------------- nnn --------------------
 
