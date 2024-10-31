@@ -40,7 +40,7 @@ public class Java_7th_kyu {
     1, 1 --> "10" (1 + 1 = 2 in decimal or 10 in binary)
     5, 9 --> "1110" (5 + 9 = 14 in decimal or 1110 in binary)
      */
-    public static String binaryAddition(int a, int b){
+    public static String binaryAddition(int a, int b) {
         return Integer.toBinaryString(a + b);
     }
 
@@ -78,7 +78,7 @@ public class Java_7th_kyu {
     The middle character(s) of the word represented as a string.
      */
     public static String getMiddle(String word) {
-            int middle = word.length() / 2;
+        int middle = word.length() / 2;
         if (word.length() % 2 != 0) {
             return word.substring(middle, middle + 1);
         } else {
@@ -145,7 +145,7 @@ public class Java_7th_kyu {
     "aba" --> false
     "moOse" --> false (ignore letter case)
      */
-    public static boolean  isIsogram(String str) {
+    public static boolean isIsogram(String str) {
         String lowerCaseStr = str.toLowerCase();
         HashSet<Character> charSet = new HashSet<>();
         for (char c : lowerCaseStr.toCharArray()) {
