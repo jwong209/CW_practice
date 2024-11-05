@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.*;
 
-public class Java_7th_kyu {
+public class Java_7th_kyu_01 {
     public static void main(String[] args) {
 
 //        System.out.println("binaryAddition: " + binaryAddition(1, 1));
@@ -195,9 +195,17 @@ public class Java_7th_kyu {
         return numbers[0] != numbers[1] ? numbers[0] : numbers[numbers.length - 1];
     }
 
-    /* -------------------- nnn --------------------
-
+    /* -------------------- Factorial --------------------
+    Your task is to write function factorial.
+    https://en.wikipedia.org/wiki/Factorial
      */
+    public static long factorial(int n) {
+        long product = 1;
+        for (int i = 1; i <= n; i++) {
+            product *= i;
+        }
+        return product;
+    }
 
     /* -------------------- nnn --------------------
 

@@ -1,8 +1,6 @@
 package org.example;
 
-import java.util.Arrays;
-
-public class Java_6th_kyu {
+public class Java_6th_kyu_01 {
     public static void main(String[] args) {
 //        System.out.println("whoLikesIt: " + whoLikesIt(new String[]{}));
 //        System.out.println("whoLikesIt: " + whoLikesIt(new String[]{"Peter"}));

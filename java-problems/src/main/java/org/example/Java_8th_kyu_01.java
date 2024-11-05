@@ -1,11 +1,9 @@
 package org.example;
 
-import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.*;
 
-public class Java_8th_kyu {
+public class Java_8th_kyu_01 {
     public static void main(String[] args) {
 //        System.out.println("Vowel remover: " + shortcut("hello"));
 //        System.out.println("Vowel remover: " + shortcut("codewars"));
