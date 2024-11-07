@@ -249,13 +249,36 @@ function reverseLetter(str) {
   return reversedStr.replace(/[^a-z]/g, '');
 }
 
-/* ---------------------------------------- nnn ----------------------------------------
+/* ---------------------------------------- List Filtering ----------------------------------------
+In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
 
+Example
+filter_list([1,2,'a','b']) == [1,2]
+filter_list([1,'a','b',0,15]) == [1,0,15]
+filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 */
+function filter_list(l) {
+  const arr = [];
+  for (let el of l) {
+    if (typeof el === 'number'){
+      arr.push(el)}
+  }
+  return arr
 
-/* ---------------------------------------- nnn ----------------------------------------
+  // return l.filter(el => typeof el === 'number');
+}
+// console.log(filter_list([1,2,'a','b'])); // >>> [1,2]
 
+/* ---------------------------------------- Descending Order ----------------------------------------
+Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+Examples:
+Input: 42145 Output: 54421
+Input: 145263 Output: 654321
+Input: 123456789 Output: 987654321
 */
+function descendingOrder(n) {
+  return +n.toString().split('').sort().reverse().join('');
+}
 
 /* ---------------------------------------- nnn ----------------------------------------
 
