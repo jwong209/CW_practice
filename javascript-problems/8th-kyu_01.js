@@ -355,6 +355,40 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
 }
 // console.log(50, 20);
 
+/* ---------------------------------------- Remove First and Last Character ----------------------------------------
+It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry about strings with less than two characters.
+*/
+function removeChar(str){
+  return str.substring(1, str.length - 1)
+ };
+
+/* ---------------------------------------- Remove First and Last Character Part Two ----------------------------------------
+You are given a string containing a sequence of character sequences separated by commas.
+
+Write a function which returns a new string containing the same character sequences except the first and the last ones but this time separated by spaces.
+
+If the input string is empty or the removal of the first and last items would cause the resulting string to be empty, return an empty value (represented as a generic value NULL in the examples below).
+
+Examples
+"1,2,3"      =>  "2"
+"1,2,3,4"    =>  "2 3"
+"1,2,3,4,5"  =>  "2 3 4"
+
+""     =>  NULL
+"1"    =>  NULL
+"1,2"  =>  NULL
+*/
+function array(string) {
+  const strArr = string.split(',');
+  let ans = string = strArr.slice(1, strArr.length - 1).join(' ');
+  if (ans === '') return null;
+  return ans;
+}
+
+/* ---------------------------------------- nnn ----------------------------------------
+
+*/
+
 /* ---------------------------------------- nnn ----------------------------------------
 
 */
