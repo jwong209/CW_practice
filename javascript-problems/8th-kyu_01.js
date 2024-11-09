@@ -282,7 +282,7 @@ function numberToString(num) {
     You cannot assume the size of the array.
     You can assume that you do get an array.
 */
-// const smash = words => words.join(' ');
+const smash = words => words.join(' ');
 // console.log(smash(['hello', 'world', 'this', 'is', 'great']));
 
 /* ---------------------------------------- Count Odd Numbers below n ----------------------------------------
@@ -384,6 +384,74 @@ function array(string) {
   if (ans === '') return null;
   return ans;
 }
+
+/* ---------------------------------------- Filter out the geese ----------------------------------------
+Write a function that takes a list of strings as an argument and returns a filtered list containing the same elements but with the 'geese' removed.
+
+The geese are any strings in the following array, which is pre-populated in your solution:
+
+  ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+For example, if this array were passed as an argument:
+
+ ["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]
+Your function would return the following array:
+
+["Mallard", "Hook Bill", "Crested", "Blue Swedish"]
+The elements in the returned array should be in the same order as in the initial array passed to your function, albeit with the 'geese' removed. Note that all of the strings will be in the same case as those provided, and some elements may be repeated.
+*/
+function gooseFilter (birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  return birds.filter(item => !geese.includes(item));
+}
+// console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));
+
+/* ---------------------------------------- Name Shuffler ----------------------------------------
+Write a function that returns a string in which firstname is swapped with last name.
+
+Example(Input --> Output)
+
+"john McClane" --> "McClane john"
+*/
+function nameShuffler(str){
+  return str.split(' ').reverse().join(" ");
+}
+
+/* ---------------------------------------- Is it a palindrome? ----------------------------------------
+Write a function that checks if a given string (case insensitive) is a palindrome.
+A palindrome is a word, number, phrase, or other sequence of symbols that reads the same backwards as forwards, such as madam or racecar.
+*/
+function isPalindrome(x) {
+  return x.toLowerCase() === x.toLowerCase().split('').reverse().join('');
+}
+
+/* ---------------------------------------- Capitalization and Mutability ----------------------------------------
+Your coworker was supposed to write a simple helper function to capitalize a string (that contains a single word) before they went on vacation.
+
+Unfortunately, they have now left and the code they gave you doesn't work. Fix the helper function they wrote so that it works as intended (i.e. it must make the first character in the string upper case).
+
+The string will always start with a letter and will never be empty.
+
+Examples:
+"hello" --> "Hello"
+"Hello" --> "Hello" (the first letter was already capitalized)
+"a"     --> "A"
+*/
+function capitalizeWord(word) {
+  const cap = word.charAt(0).toUpperCase() + word.slice(1);
+  return cap;
+}
+
+/* ---------------------------------------- nnn ----------------------------------------
+
+*/
+
+/* ---------------------------------------- nnn ----------------------------------------
+
+*/
+
+/* ---------------------------------------- nnn ----------------------------------------
+
+*/
 
 /* ---------------------------------------- nnn ----------------------------------------
 
