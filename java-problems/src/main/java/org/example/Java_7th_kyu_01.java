@@ -207,6 +207,76 @@ public class Java_7th_kyu_01 {
         return product;
     }
 
+    /* -------------------- Testing 1-2-3 --------------------
+    Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
+    Write a function which takes a list of strings and returns each line prepended by the correct number.
+    The numbering starts at 1. The format is n: string. Notice the colon and space in between.
+
+    Examples: (Input --> Output)
+    [] --> []
+    ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
+     */
+    public static List<String> number(List<String> lines) {
+        List<String> answer = new ArrayList<>(lines);
+
+        for(int i= 0; i< lines.size() ; i++) {
+            answer.set(i,(i+1)+": "+ lines.get(i));
+        }
+        return answer;
+    }
+
+    /* -------------------- Shortest Word --------------------
+    Simple, given a string of words, return the length of the shortest word(s).
+    String will never be empty and you do not need to account for different data types.
+     */
+    public static int findShort(String s) {
+        String[] strings = s.split(" ");
+        String shortest = strings[0];
+
+        for (String str : strings) {
+            if (str.length() < shortest.length()) {
+                shortest = str;
+            }
+        }
+        return shortest.length();
+    }
+
+    /* -------------------- Vowel Count --------------------
+    Return the number (count) of vowels in the given string.
+    We will consider a, e, i, o, u as vowels for this Kata (but not y).
+    The input string will only consist of lower case letters and/or spaces.
+     */
+    public static int getCount(String str) {
+        int count = 0;
+        String[] arr = str.split("");
+        for (String c : arr) {
+            if (c.equals("a") || c.equals("e") ||c.equals("i") ||c.equals("o") ||c.equals("u")) count++;
+        }
+        return count;
+
+//        return (int) str.chars().filter(c -> "aeiou".indexOf(c) >= 0).count();
+    }
+
+    /* -------------------- nnn --------------------
+
+     */
+
+    /* -------------------- nnn --------------------
+
+     */
+
+    /* -------------------- nnn --------------------
+
+     */
+
+    /* -------------------- nnn --------------------
+
+     */
+
+    /* -------------------- nnn --------------------
+
+     */
+
     /* -------------------- nnn --------------------
 
      */
