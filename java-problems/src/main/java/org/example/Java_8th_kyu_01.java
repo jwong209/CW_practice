@@ -323,6 +323,51 @@ public class Java_8th_kyu_01 {
         return Math.abs(dadYears - 2 * sonYears);
     }
 
+    /* -------------------- Quarter of the year --------------------
+    Given a month as an integer from 1 to 12, return to which quarter of the year it belongs as an integer number.
+    For example: month 2 (February), is part of the first quarter; month 6 (June), is part of the second quarter; and month 11 (November), is part of the fourth quarter.
+
+    Constraint:
+    1 <= month <= 12
+     */
+    public static int quarterOf(int month) {
+        if (month <= 3) {
+            return 1;
+        } else if (month <= 6) {
+            return 2;
+        } else if (month <= 9) {
+            return 3;
+        }
+        return 4;
+    }
+
+    /* -------------------- Area or Perimeter --------------------
+    You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.
+    If it is a square, return its area. If it is a rectangle, return its perimeter.
+
+    Example(Input1, Input2 --> Output):
+    6, 10 --> 32
+    3, 3 --> 9
+    Note: for the purposes of this kata you will assume that it is a square if its length and width are equal, otherwise it is a rectangle.
+     */
+    public static int areaOrPerimeter (int l, int w) {
+        if (l == w) return l * w;
+        return (2 * l) + (2 * w);
+    }
+
+    /* -------------------- Determine offspring sex based on genes XX and XY chromosomes --------------------
+    The male gametes or sperm cells in humans and other mammals are heterogametic and contain one of two types of sex chromosomes. They are either X or Y. The female gametes or eggs however, contain only the X sex chromosome and are homogametic.
+
+    The sperm cell determines the sex of an individual in this case. If a sperm cell containing an X chromosome fertilizes an egg, the resulting zygote will be XX or female. If the sperm cell contains a Y chromosome, then the resulting zygote will be XY or male.
+
+    Determine if the sex of the offspring will be male or female based on the X or Y chromosome present in the male's sperm.
+
+    If the sperm contains the X chromosome, return "Congratulations! You're going to have a daughter."; If the sperm contains the Y chromosome, return "Congratulations! You're going to have a son.";
+     */
+    public static String chromosomeCheck(String sperm) {
+        return sperm.equals("XX") ? "Congratulations! You're going to have a daughter." : "Congratulations! You're going to have a son.";
+    }
+
     /* -------------------- nnn --------------------
 
      */
@@ -330,4 +375,5 @@ public class Java_8th_kyu_01 {
     /* -------------------- nnn --------------------
 
      */
+
 }
