@@ -441,17 +441,76 @@ function capitalizeWord(word) {
   return cap;
 }
 
-/* ---------------------------------------- nnn ----------------------------------------
+/* ---------------------------------------- Correct the mistakes of the character recognition software ----------------------------------------
+Character recognition software is widely used to digitise printed texts. Thus the texts can be edited, searched and stored on a computer.
+When documents (especially pretty old ones written with a typewriter), are digitised character recognition softwares often make mistakes.
 
+Your task is correct the errors in the digitised text. You only have to handle the following mistakes:
+S is misinterpreted as 5
+O is misinterpreted as 0
+I is misinterpreted as 1
+The test cases contain numbers only by mistake.
 */
+function correct(string)
+{
+	let str = '';
+  for(let char of string){
+    if(char === '5'){
+      str += 'S';
+    }else if(char === '0'){
+      str += 'O';
+    }else if(char === '1'){
+      str += 'I'
+    }else {
+      str += char;
+    }
+  }
+  return str;
+}
 
-/* ---------------------------------------- nnn ----------------------------------------
+// correct = s => s.replace(/0/g,'O').replace(/1/g,'I').replace(/5/g,'S')
 
+// console.log(correct("1F-RUDYARD K1PL1NG")); // >>> "IF-RUDYARD KIPLING"
+// console.log(correct("UR5ULA K. LE GU1N - TALE5 FR0M EARTH5EA")); // >>> "URSULA K. LE GUIN - TALES FROM EARTHSEA"
+
+/* ---------------------------------------- Regex count lowercase letters ----------------------------------------
+Your task is simply to count the total number of lowercase letters in a string.
+
+Examples
+"abc" ===> 3
+"abcABC123" ===> 3
+"abcABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~" ===> 3
+"" ===> 0;
+"ABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~" ===> 0
+"abcdefghijklmnopqrstuvwxyz" ===> 26
 */
+function lowercaseCount(str){
+  let count = 0;
+  for (let char of str) {
+      if (char.toLowerCase() === char && char >= 'a' && char <= 'z') {
+          count++;
+      }
+  }
+  return count;
 
-/* ---------------------------------------- nnn ----------------------------------------
+  // return (str.match(/[a-z]/g) || []).length
+}
 
+/* ---------------------------------------- 101 Dalmatians - squash the bugs, not the dogs! ----------------------------------------
+Your friend has been out shopping for puppies (what a time to be alive!)... He arrives back with multiple dogs, and you simply do not know how to respond!
+
+By repairing the function provided, you will find out exactly how you should respond, depending on the number of dogs he has.
+
+The number of dogs will always be a number and there will always be at least 1 dog.
 */
+function howManyDalmatians(number) {
+
+  var dogs = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIANS!!!"];
+
+  var respond = number <= 10 ? dogs[0] : (number <= 50) ? dogs[1] : (number === 101) ?  dogs[3] : dogs[2];
+
+  return respond;
+}
 
 /* ---------------------------------------- nnn ----------------------------------------
 
