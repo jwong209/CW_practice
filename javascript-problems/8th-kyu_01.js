@@ -512,13 +512,42 @@ function howManyDalmatians(number) {
   return respond;
 }
 
-/* ---------------------------------------- nnn ----------------------------------------
+/* ---------------------------------------- Grasshopper - Bug Squashing ----------------------------------------
+Terminal game bug squashing
+You are creating a text-based terminal version of your favorite board game. In the board game, each turn has six steps that must happen in this order: roll the dice, move, combat, get coins, buy more health, and print status.
 
+You are using a library that already has the functions below. Create a function named main that calls the functions in the proper order.
+
+- combat
+- buyHealth
+- getCoins
+- printStatus
+- rollDice
+- move
 */
+// var health = 100
+// var position = 0
+// var coins = 0
 
-/* ---------------------------------------- nnn ----------------------------------------
+// function main () {
+//   rollDice()
+//   move()
+//   combat()
+//   getCoins()
+//   buyHealth()
+//   printStatus()
+// }
 
+/* ---------------------------------------- Is integer safe to use? ----------------------------------------
+Not all integers can be represented by JavaScript/TypeScript. It has space to to represent 53bit signed integers. In this Kata, we've to determine if it is safe to use the integer or not. Make use of the latest ES6 features to find this.
+
+SafeInteger(9007199254740990) //true
+SafeInteger(-90) //true
+SafeInteger(9007199254740992) //false
 */
+function SafeInteger(n) {
+  return Number.isSafeInteger(n)
+}
 
 /* ---------------------------------------- nnn ----------------------------------------
 
