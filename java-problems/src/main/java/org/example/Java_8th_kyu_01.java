@@ -435,15 +435,19 @@ public class Java_8th_kyu_01 {
         return sum;
     }
 
-    /* -------------------- nnn --------------------
-
-
+    /* -------------------- Even or Odd --------------------
+    Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
      */
+    public static String evenOrOdd(int number) {
+        return number % 2 == 0 ? "Even" : "Odd";
+    }
 
-    /* -------------------- nnn --------------------
-
-
+    /* -------------------- Multiply --------------------
+    This code does not execute properly. Try to figure out why.
      */
+    public static Double multiply(Double a, Double b) {
+        return (double)a * b;
+    }
 
     /* -------------------- nnn --------------------
 
