@@ -6,8 +6,13 @@ Write a function that when given a URL as a string, parses out just the domain n
 * url = "https://www.cnet.com"                -> domain name = cnet"
 */
 function domainName(url){
-    let str = url.replace('http://','').replace('https://','').replace('www.','').split(/[/?#]/)[0];
-    return str.split(".")[0];
+    // let str = url.replace('http://','').replace('https://','').replace('www.','').split(/[/?#]/)[0];
+    // return str.split(".")[0];
+
+    url = url.replace ("https://", '');
+    url = url.replace("http://", '');
+    url = url.replace("www.", '');
+    return url.split('.')   [0];
   }
 
 /* ---------------------------------------- nnn ----------------------------------------
