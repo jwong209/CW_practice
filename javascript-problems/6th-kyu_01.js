@@ -59,6 +59,8 @@ function duplicateCount(text){
     }
   }
   return count;
+
+  
 }
 // console.log(duplicateCount("abcde")); // >>> 0
 // console.log(duplicateCount("ABBA")); // >>> 2
