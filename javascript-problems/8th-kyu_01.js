@@ -564,13 +564,49 @@ Try researching about built-in Array methods; they may help shorten your code a 
 */
 const sumSquares = array => array.map(a => a**2).reduce((a,b) => a+b);
 
-/* ---------------------------------------- nnn ----------------------------------------
+/* ---------------------------------------- "this" is a problem ----------------------------------------
+We want to create a constructor function 'NameMe', which takes first name and last name as parameters. The function combines the first and last names and saves the value in "name" property.
 
+We already implemented that function, but when we actually run the code, the "name" property is accessible, but the "firstName" and "lastName" is not accessible. All the properties should be accessible. Can you find what's wrong with it? A test fixture is also available
+
+function NameMe(first, last) {
+    this.firstName = first;
+    this.lastName = last;
+    return {name: this.firstName + ' ' + this.lastName};
+}
+
+var n = new NameMe('John', 'Doe');
+n.firstName //Expected: John
+n.lastName //Expected: Doe
+n.name //Expected: John Doe
 */
+function NameMe(first, last) {
+  this.firstName = first;
+  this.lastName = last;
+  this.name = this.firstName + ' ' + this.lastName;
+}
 
-/* ---------------------------------------- nnn ----------------------------------------
+/* ---------------------------------------- A Needle in the Haystack ----------------------------------------
+Can you find the needle in the haystack?
 
+Write a function findNeedle() that takes an array full of junk but containing one "needle"
+
+After your function finds the needle it should return a message (as a string) that says:
+
+"found the needle at position " plus the index it found the needle, so:
+
+Example(Input --> Output)
+
+["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"] --> "found the needle at position 5"
+Note: In COBOL, it should return "found the needle at position 6"
 */
+function findNeedle(haystack) {
+  for (let i = 0; i < haystack.length; i++) {
+    if (haystack[i] === "needle"){
+      return "found the needle at position " + i;
+    }
+  }
+}
 
 /* ---------------------------------------- nnn ----------------------------------------
 
